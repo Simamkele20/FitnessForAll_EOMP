@@ -1,8 +1,14 @@
 <template>
-  <div class="container fluid  ">
-    
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container fluid  text-center">
+  
+  <div class="welcome p-4">
+    <h3 > WELCOME TO</h3>
+    <h3>FITNESS FOR ALL</h3>
+  </div>
+
+  <div class="p-5 text-black fw-bolder">
+    <h4>   NEW ARRIVALS</h4>
+  
   </div>
 
 
