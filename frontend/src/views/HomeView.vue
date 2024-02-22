@@ -1,18 +1,25 @@
 <template>
-  <div class="container fluid  text-center">
-  
-  <div class="welcome p-4">
-    <h3 > WELCOME TO</h3>
-    <h3>FITNESS FOR ALL</h3>
-  </div>
-
-  <div class="p-5 text-black fw-bolder">
-    <h4>   NEW ARRIVALS</h4>
-  
-  </div>
+  <div class="">
 
 
-  <!-- <div>
+    <div class="welcome">
+      <h6 class="heading1 text-white ">Empowering every body</h6>
+      <h1 class="heading2 text-white   "> fitness for All</h1>
+      <a class="btn btn-light " href="#" role="button">Shop Now</a>
+    </div>
+
+    <div class="text-center text-black">
+      <h3 class=" heading3 mt-5 "> New Arrivals</h3>
+    <h1> <i class="bi bi-arrow-left"></i> </h1>  
+    <h1> <i class="bi bi-arrow-right "></i> </h1>  
+
+    </div>
+
+
+
+
+
+    <!-- <div>
     <Spinner />
   </div> -->
   </div>
@@ -31,15 +38,14 @@ export default {
     }
   },
   computed: {
-  
+
 
 
   },
   mounted() {
 
-}
+  }
 }
 </script>
 
-<style src="../assets/css/style.css">
-</style>
+<style src="../assets/css/style.css"></style>
