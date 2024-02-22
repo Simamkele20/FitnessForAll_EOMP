@@ -1,4 +1,4 @@
-Universal Selector
+/* Universal Selector */
 *,
 *::before,
 *::after{
@@ -7,9 +7,76 @@ Universal Selector
     box-sizing: border-box;
 }
 
+/* imports */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-main{
-    background-color: #CFCAD7;
+
+::-webkit-scrollbar{
+    display: none;
+  }
+
+  .footer1{
+    font-family: "Passero One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
 }
 
+  /* Home Content */
+.welcome{
+    background: linear-gradient(rgba(0, 0, 0, 0),
+                       rgba(0, 0, 0, 0.5)), url(https://i.ibb.co/g4gbPYW/istockphoto-1288737452-612x612-transformed-1.jpg) no-repeat top center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 
+}
+.heading1{
+    padding-top: 567px;
+    font-family: "Passero One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+    padding-left: 110px;
+}
+
+.btn{
+    font-family: "Passero One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+
+}
+.heading2{
+        font-family: "Nosifer", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+.heading3{
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* About Content */
+
+.About1{
+    background: linear-gradient(rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5)), url(https://i.ibb.co/LxB9ktR/istockphoto-909416522-612x612.jpg) no-repeat top center fixed;
+-webkit-background-size: cover;
+background-size: cover;
+margin-bottom: -10px;
+
+}
+
+.paragraphs{
+    font-family: "Kenia", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    padding-top: 130px;
+}
+
+.PicA{
+    width: 766px;
+}

@@ -1,7 +1,6 @@
 <template>
- 
-  <navbar />
-  <main class="container-fluid  ">
+  <navbar/>
+  <main>
    <router-view />
    </main>
  
