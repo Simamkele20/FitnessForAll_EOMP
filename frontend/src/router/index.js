@@ -28,6 +28,11 @@ const routes = [
     name: "contact",
     component: () => import("../views/ContactView.vue"),
   },
+  {
+    path: "/users",
+    name: "users",
+    component: () => import("../views/UsersView.vue"),
+  }
 ];
 
 const router = createRouter({

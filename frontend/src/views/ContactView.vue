@@ -51,7 +51,7 @@
           Town</span></i></li>
 
     <li class="list-item"><i class="bi bi-telephone-fill"><span class="contact-text phone"><a
-            href="tel:+27 65 6013 640" title="Give me a call">(+27) 656 013 640</a></span></i></li>
+            href="tel:+27 65 6013 640" title="Give me a call">(+27) 21 3701 640</a></span></i></li>
 
     <li class="list-item"><i class="bi bi-envelope"><span class="contact-text gmail"><a href="mailto:Princetancu"
             title="Send me an email">FitnessForAll@gmail.com</a></span></i></li>
