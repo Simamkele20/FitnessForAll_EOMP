@@ -24,7 +24,7 @@ import {dbconnection as db} from "../config/index.js"
             if (err) throw err;
             res.json({
               status: res.statusCode,
-              result,
+              result: result[0],
             });
           }); 
     }
