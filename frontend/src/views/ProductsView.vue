@@ -11,15 +11,50 @@
                   <button class=" btn btn-dark"> Sorting by Price</button>
               </div>
           </div>
+  
+  <div class="col">
+    <div class="row d-grid d-md-flex" v-if="products">
+            <Card v-for="product in products" :key="product.prodID" class="ProdCar text-center">
+                <template #cardHeader>
+                   <img :src="product.prodUrl" class="card-img-top  mx-auto mt-4  w-75 " alt="Pro">
+                </template>
+                <template #cardBody>
+                    <h4 class="card-text text-dark  ">
+                        {{ product.prodName }}
+                    </h4>
+                    <h5 class="card-text text-dark ">
+                        R{{ product.prodAmount }}
+                    </h5>
+                    <router-link :to="{name: 'product', params:{id: product.prodID}}">View More</router-link>
+                </template>
+            </Card>
+        </div>
+        <div class="row mx-auto" v-else>
+          <Spinner />
+        </div>
+  </div>
+    
+  
       </div>
-  
-  
 </template>
 
 
 <script>
+import Spinner from '@/components/Spinner.vue';
+import Card from '../components/Card.vue';
 export default {
-  name: "ProductsView"
+  name: "ProductsView",
+components: {
+        Card, Spinner
+    },
+    computed:{
+        products(){
+            return this.$store.state.products
+        }
+    },
+    mounted() {
+        this.$store.dispatch('fetchProducts')
+    }
 }
 </script>
 
