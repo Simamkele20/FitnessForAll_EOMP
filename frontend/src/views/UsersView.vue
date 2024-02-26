@@ -18,13 +18,13 @@
       </div>
       <div class=" prodBtn row text-end">
         <div class="col">
-          <input type="text" placeholder="Search Product by name" class="form-control">
+          <input type="text" placeholder="Search User by name" class="form-control">
         </div>
         <div class="col ">
           <button class=" btn btn-dark"> Filter</button>
         </div>
         <div class="col-2 mx-3">
-          <button class=" btn btn-dark"> Add a Product</button>
+          <button class=" btn btn-dark"> Add a User</button>
         </div>
       </div>
     </div>
