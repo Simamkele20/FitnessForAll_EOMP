@@ -1,10 +1,10 @@
 import { dbconnection as db } from "../config/index.js";
 import { hash, compare } from "bcrypt";
-
+import {createToken} from "../middleware/Aunthetication.js"
 class Users {
   fetchUsers(req, res) {
     const qry = `
-        SELECT UserID,firstName,lastName,userAge,gender,emailAdd,userPass,userRole,userProfile
+        SELECT UserID,firstName,lastName,userAge,gender,emailAdd,userPass,userRole
         FROM Users
         `;
 
@@ -19,7 +19,7 @@ class Users {
   fetchUser(req, res) {
     const qry = `
         SELECT UserID,firstName,lastName,
-        userAge,gender,emailAdd,userPass,userRole,userProfile
+        userAge,gender,emailAdd,userPass,userRole
         FROM Users
         WHERE userID = ${req.params.id}
         `;
@@ -35,10 +35,10 @@ class Users {
   async createUser(req, res) {
     //payload
     let data = req.body;
-    data.userPwd = await hash(data?.userPwd, 8);
+    data.userPass= await hash(data?.userPass, 8);
     let user = {
       emailAdd: data.emailAdd,
-      userPwd: data.userPwd,
+      userPass: data.userPass,
     };
     const qry = `
       INSERT INTO Users
