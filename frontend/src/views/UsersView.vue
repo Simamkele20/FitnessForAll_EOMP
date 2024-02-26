@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <table class="AdiCont table mt-5  mx-auto">
+    <table class="AdiCont table mt-5 text-center mx-auto"  v-if="users">
       <thead>
         <tr>
           <th> User ID</th>
@@ -41,25 +41,41 @@
           <th> Action</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+      <tbody  class="text-center">
+        <tr  v-for="user in users" :key="user.userID">
+          <th scope="row"> {{ user.userID }}</th>
+          <td> {{ user.firstName}}</td>
+          <td>{{ user.lastName}}</td>
+          <td>{{ user.userAge}}</td>
+          <td>{{ user.userGender}}</td>
+          <td>{{ user.emailAdd}}</td>
+          <td> {{ user.userRole}}</td>
           <td><button class=" btn btn-dark"> Edit</button></td>
           <td><button class="  btn btn-dark"> Delete</button></td>
         </tr>
       </tbody>
     </table>
+    <div class="row mx-auto" v-else>
+          <Spinner />
+        </div>
   </template>
   
   <script>
+  import Spinner from '@/components/Spinner.vue';
   export default {
-    name: "AdminView"
+    name: "UsersView",
+    components: {
+       Spinner
+    },
+    computed:{
+            users() {
+                return this.$store.state.users
+            }
+        },
+        mounted() {
+            this.$store.dispatch('fetchUsers')
+
+        }
   }
   </script>
   

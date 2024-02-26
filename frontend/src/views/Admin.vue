@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <table class="AdiCont table mt-5 w-75 mx-auto">
+  <table class="AdiCont table mt-5 w-75 text-center mx-auto" v-if="products">
     <thead>
       <tr>
         <th> Prod ID</th>
@@ -38,22 +38,38 @@
         <th> Action</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tbody  class="text-center">
+      <tr v-for="product in products" :key="product.prodID">
+        <th scope="row"> {{ product.prodID }}</th>
+        <td>{{ product.prodName }} </td>
+        <td>  {{ product.prodQuantity }}   </td>
+        <td>   R {{ product.prodAmount }} </td>
         <td><button class=" btn btn-dark"> Edit</button></td>
         <td><button class="  btn btn-dark"> Delete</button></td>
       </tr>
     </tbody>
   </table>
+  <div class="row mx-auto" v-else>
+          <Spinner />
+        </div>
 </template>
 
 <script>
+import Spinner from '@/components/Spinner.vue';
 export default {
-  name: "AdminView"
+  name: "AdminView",
+  components: {
+       Spinner
+    },
+  computed:{
+            products() {
+                return this.$store.state.products
+            }
+        },
+        mounted() {
+            this.$store.dispatch('fetchProducts')
+
+        }
 }
 </script>
 

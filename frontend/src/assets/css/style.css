@@ -104,6 +104,13 @@ margin-bottom: -10px;
     font-size: xx-large;
 }
 
+.ProdCar{
+    font-family: "Passero One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+}
+
 
 /* Admin Content */
 .AdiCont{

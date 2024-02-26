@@ -1,11 +1,7 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
 import sweet from 'sweetalert'
-import { useCookies } from 'vue3-cookies'
-const {cookies} = useCookies()
-import router from '@/router'
-import AuthenticateUser from '/src/service/AuthenticateUser'
-const lifeURL = "https://lifechoices-app.onrender.com/"
+const lifeURL = "https://fitnessforall-eomp.onrender.com/"
 
 export default createStore({
   state: {
@@ -42,8 +38,6 @@ export default createStore({
             icon: "success",
             timer: 2000
           }) 
-          //  
-          router.push({name: 'login'})
         }
       }catch(e) {
         sweet({
@@ -133,42 +127,7 @@ export default createStore({
         }) 
       }
     },
-    async login(context, payload) {
-      try{
-       const {msg, token, result} = (await axios.post(`${lifeURL}users/login`, payload)).data 
-       if(result){
-        context.commit('setUser', {msg, result})
-        cookies.set('LegitUser', {
-          msg, token, result
-        })
-        AuthenticateUser.applyToken(token)
-        sweet({
-          title: msg,
-          text: `Welcome back, 
-          ${result?.firstName} ${result?.lastName}`,
-          icon: "success",
-          timer: 2000
-        })
-          router.push({name: 'home'})
-        }else {
-          sweet({
-            title: 'info',
-            text: msg,
-            icon: "info",
-            timer: 2000
-          })
-        }
-      }catch(e) {
-        sweet({
-          title: 'Error',
-          text: 'Failed to login.',
-          icon: "error",
-          timer: 2000
-        })
-      }
-      
 
-    },
     async fetchProducts(context) {
       try{
         let {results} = 
