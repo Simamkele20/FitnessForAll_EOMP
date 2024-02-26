@@ -37,8 +37,17 @@ userRouter.post('/register',bodyParser.json(),(req,res)=>{
         })
     }
 })
-
-
+userRouter.post('/login',bodyParser.json(),(req,res)=>{
+    try{
+        users.login(req,res)
+    }
+    catch{
+        res.json({
+            status:res.statusCode,
+            msg:"Failed to log in"
+        })
+    }
+})
 userRouter.delete('/delete/:id',(req,res)=>{
     try{
         users.deleteUser(req,res)
