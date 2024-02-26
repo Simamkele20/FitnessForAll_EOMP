@@ -4,13 +4,13 @@
       <nav class="navbar nav-pills nav-underline bg-black w-25 justify-content-center mx-auto" role="tablist">
         <ul class="d-flex mt-2  ">
           <li class="nav-item mx-2">
-          <a class="nav-link link-light" aria-current="page" href="#">Products</a>
-        </li>
-        <li class="nav-item mx-4">
-          <router-link to="/users" class="nav-link link-light">Users</router-link> 
-        </li>
+            <a class="nav-link link-light" aria-current="page" href="#">Products</a>
+          </li>
+          <li class="nav-item mx-4">
+            <router-link to="/users" class="nav-link link-light">Users</router-link>
+          </li>
         </ul>
-     
+
       </nav>
     </div>
 
@@ -38,20 +38,20 @@
         <th> Action</th>
       </tr>
     </thead>
-    <tbody  class="text-center">
+    <tbody class="text-center">
       <tr v-for="product in products" :key="product.prodID">
         <th scope="row"> {{ product.prodID }}</th>
         <td>{{ product.prodName }} </td>
-        <td>  {{ product.prodQuantity }}   </td>
-        <td>   R {{ product.prodAmount }} </td>
-        <td><button class=" btn btn-dark"> Edit</button></td>
-        <td><button class="  btn btn-dark"> Delete</button></td>
+        <td> {{ product.prodQuantity }} </td>
+        <td> R {{ product.prodAmount }} </td>
+        <td><button class="btn btn-dark"> Edit</button></td>
+        <td><button class=" btn btn-dark"> Delete</button></td>
       </tr>
     </tbody>
   </table>
   <div class="row mx-auto" v-else>
-          <Spinner />
-        </div>
+    <Spinner />
+  </div>
 </template>
 
 <script>
@@ -59,17 +59,16 @@ import Spinner from '@/components/Spinner.vue';
 export default {
   name: "AdminView",
   components: {
-       Spinner
-    },
-  computed:{
-            products() {
-                return this.$store.state.products
-            }
-        },
-        mounted() {
-            this.$store.dispatch('fetchProducts')
-
-        }
+    Spinner
+  },
+  computed: {
+    products() {
+      return this.$store.state.products
+    }
+  },
+  mounted() {
+    this.$store.dispatch('fetchProducts')
+  }
 }
 </script>
 
