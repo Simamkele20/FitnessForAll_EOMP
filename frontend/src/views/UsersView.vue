@@ -43,11 +43,11 @@
       </thead>
       <tbody  class="text-center">
         <tr  v-for="user in users" :key="user.userID">
-          <th scope="row"> {{ user.userID }}</th>
+          <th scope="row"> {{ user.UserID }}</th>
           <td> {{ user.firstName}}</td>
           <td>{{ user.lastName}}</td>
           <td>{{ user.userAge}}</td>
-          <td>{{ user.userGender}}</td>
+          <td>{{ user.gender}}</td>
           <td>{{ user.emailAdd}}</td>
           <td> {{ user.userRole}}</td>
           <td><button class=" btn btn-dark"> Edit</button></td>

@@ -111,6 +111,18 @@ margin-bottom: -10px;
     font-size: x-large;
 }
 
+/* Product COntent */
+.ProdCont{
+    font-family: "Passero One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+
+}
+
+.card-img-top{
+    aspect-ratio: 1/1;
+}
 
 /* Admin Content */
 .AdiCont{

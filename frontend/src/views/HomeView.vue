@@ -6,7 +6,7 @@
           <h1 class="heading2 text-white   "> fitness for All</h1>
         </div>
         <div class="HomeBtn col-3">
-          <a class="btn btn-light " href="#" role="button">Shop Now</a>
+          <router-link to="/products" class="nav-link link-light">   <a class="btn btn-light " href="#" role="button">Shop Now</a></router-link>
         </div>
       </div>
     <div class="text-center text-black">

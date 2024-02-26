@@ -158,6 +158,7 @@ export default createStore({
           }) 
         }
       }catch(e) {
+        console.log(e.message);
         sweet({
           title: 'Error',
           text: 'A product was not found.',
@@ -165,7 +166,7 @@ export default createStore({
           timer: 2000
         }) 
       }
-    }
+    },
   },
   modules: {
 
