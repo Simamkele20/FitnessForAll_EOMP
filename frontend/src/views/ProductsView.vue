@@ -19,7 +19,7 @@
             <img :src="product.prodUrl" class="card-img-top   mx-auto mt-4  w-75 " alt="Pro">
           </template>
           <template #cardBody>
-            <h4 class="card-text text-dark  ">
+            <h4 class="card-text text-dark mt-3 ">
               {{ product.prodName }}
             </h4>
             <h5 class="card-text text-dark ">
