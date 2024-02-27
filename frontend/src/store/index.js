@@ -129,7 +129,22 @@ export default createStore({
       }
     
     },
-
+//  async addProduct(context,payload){
+//   try{
+//     let {results} = 
+//     (await axios.get(`${lifeURL}products/addProduct`)).data
+//     if(results) {
+//       context.commit('setProducts', results)
+//     }
+//   }catch(e) {
+//     sweet({
+//       title: 'Error',
+//       text: 'An error occurred when adding products.',
+//       icon: "error",
+//       timer: 2000
+//     }) 
+//   }
+//  },
     async fetchProducts(context) {
       try{
         let {results} = 

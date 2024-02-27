@@ -90,10 +90,10 @@
 /* Animation */
 @keyframes sliding {
     from{
-        transform: translateX(80%);
+        transform: translateX(40%);
     }
     to {
-        transform: translateX(-80%);
+        transform: translateX(-40%);
     }
 }
 
@@ -461,8 +461,22 @@ margin-bottom: -10px;
     margin-inline: auto;   
     animation:none !important;
 }
-  }
 
+
+.heading1{
+    padding-top: 350px;
+    width:350px;
+    margin-left:-70px;
+  }
+  .heading2{
+    width:400px;
+  }
+.HomeBtn{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: auto;
+}
+  }
 
   /* Admin COntent */
   @media screen and (max-width: 460px) {
