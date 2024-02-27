@@ -10,25 +10,27 @@
         </div>
       </div>
     <div class="text-center text-black">
-      <h3 class=" heading3 mt-5 "> New Arrivals</h3>
+      <h3 class=" heading3 mt-2 "> New Arrivals</h3>
     </div>
-
-
-
-
-
-    <!-- <div>
+  
+    <div class="slider  d-flex "  v-if="products">
+<div class="Scroller " v-for="product in products" :key="product.prodID">
+  <img :src="product.prodUrl" class="card-img-top w-100">
+  <h2 class="text-center mx-auto mx-5">{{ product.prodName }}</h2>
+</div> 
+      </div>
+    <div v-else>
     <Spinner />
-  </div> -->
+  </div>
   </div>
 </template>
 
 <script>
 
-// import Spinner from '@/components/Spinner.vue';
+import Spinner from '@/components/Spinner.vue';
 export default {
   components: {
-    // Spinner
+    Spinner
   },
   data() {
     return {
@@ -36,11 +38,12 @@ export default {
     }
   },
   computed: {
-
-
-
+    products() {
+      return this.$store.state.products?.slice(-3)
+    }
   },
   mounted() {
+    this.$store.dispatch('fetchProducts')
 
   }
 }

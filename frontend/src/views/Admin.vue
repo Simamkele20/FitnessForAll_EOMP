@@ -24,8 +24,35 @@
         <button class=" btn btn-dark"> Filter</button>
       </div>
       <div class="col-2 mx-3">
-        <button class=" btn btn-dark"> Add a Product</button>
+        <button class=" btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> Add a Product</button>
       </div>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add new Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    <h5 class="text-start">Product Name: </h5> 
+     <input type="text" placeholder="Name" class="form-control">
+    <h5 class="text-start mt-2">Product Quantity: </h5> 
+     <input type="text mt-2" placeholder="Quantity" class="form-control">
+    <h5 class="text-start mt-2">Product URL: </h5> 
+     <input type="text mt-2" placeholder="Image URL" class="form-control">
+    <h5 class="text-start mt-2">Product Amount: </h5> 
+     <input type="text" placeholder="Amount" class="form-control">
+    <h5 class="text-start mt-2">Product Description: </h5> 
+     <input type="text" placeholder="Description" class="form-control">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark">Add Product</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
   <table class="AdiCont table mt-5 w-75 text-center mx-auto" v-if="products">
@@ -61,6 +88,13 @@ export default {
   components: {
     Spinner
   },
+  // data(){
+  //   return {
+  //     payload:{
+  //       firstName: ''
+  //     }
+  //   }
+  // },
   computed: {
     products() {
       return this.$store.state.products
@@ -68,7 +102,13 @@ export default {
   },
   mounted() {
     this.$store.dispatch('fetchProducts')
-  }
+  },
+  // methods: {
+  //   addNewProduct() {
+
+  //     this.$store.dispatch('', )
+  //   }
+  // }
 }
 </script>
 

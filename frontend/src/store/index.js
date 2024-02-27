@@ -125,7 +125,9 @@ export default createStore({
           icon: "error",
           timer: 2000
         }) 
+        window.location.reload()
       }
+    
     },
 
     async fetchProducts(context) {
