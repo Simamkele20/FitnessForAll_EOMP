@@ -93,7 +93,7 @@
   import Spinner from '@/components/Spinner.vue';
   export default {
     name: "UsersView",
-
+ 
     components: {
        Spinner
     },
@@ -105,6 +105,7 @@
         mounted() {
             this.$store.dispatch('fetchUsers')
         },
+ 
   }
   </script>
   

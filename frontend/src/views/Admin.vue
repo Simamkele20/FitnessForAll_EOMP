@@ -85,16 +85,18 @@
 import Spinner from '@/components/Spinner.vue';
 export default {
   name: "AdminView",
-  components: {
-    Spinner
-  },
   // data(){
   //   return {
   //     payload:{
-  //       firstName: ''
+  //       firstName: '',
+  //       lastName: "",
   //     }
   //   }
   // },
+  components: {
+    Spinner
+  },
+
   computed: {
     products() {
       return this.$store.state.products
@@ -103,7 +105,7 @@ export default {
   mounted() {
     this.$store.dispatch('fetchProducts')
   },
-  // methods: {
+  //        methods: {
   //   addNewProduct() {
 
   //     this.$store.dispatch('', )
