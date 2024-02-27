@@ -3,94 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
-    ">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title> API</title>
 </head>
-<body>
-    <div class="container">
-        <h1 class="mb-4 ps-5 ms-5">
-            <u>
-                Endpoints Information
-            </u>
-        </h1>
-        <table class="table table-striped mt-4">
-            <thead>
-                <th colspan="2">Routes</th>
-                <th colspan="2">HTTP methods</th>
+<body class="bg-dark text-white text-center">
+    <h4 class="text-underline"> Router Information</h4>
+    <table class="table table-bordered border-dark mt-2 w-50 mx-auto">
+        <h5> General Routing</h5>
+        <thead>
+            <tr>
+                <th scope="col">Routes</th>
+                <th scope="col">HTTP Methods</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">/</th>
+                <td>GET</td>
+                <td>To display the home page.</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-bordered border-dark mt-2 w-50 mx-auto">
+        <h5 class="mt-5"> User Routing</h5>
+        <thead>
+            <tr>
+                <th scope="col">Routes</th>
+                <th scope="col">HTTP Methods</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">/users/</th>
+                <td>GET</td>
+                <td>To display all users.</td>
+            </tr>
+            <tr>
+                <th scope="row">/users/:id/</th>
+                <td>GET</td>
+                <td>To display a user.</td>
+            </tr>
+            <tr>
+                <th scope="row">/users/register/</th>
+                <td>POST</td>
+                <td>To add a new user.</td>
+            </tr>
 
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="2">/</td>
-                    <td colspan="2">GET</td>
-    
-                </tr>
-                <th colspan="4">
-                    Users Endpoints
-                </th>
-                <tr>
-                    <td colspan="2">/users</td>
-                    <td colspan="2">GET</td>
-                    
-                </tr>
-                <tr>
-                    <td colspan="2">/users/:id</td>
-                    <td colspan="2">GET</td>
-                  
-                </tr>
-                <tr>
-                    <td colspan="2">/users/register</td>
-                    <td colspan="2">POST</td>
-           
-                </tr>
-                
-                <tr>
-                    <td colspan="2">/users/update</td>
-                    <td colspan="2">PATCH</td>
-               
-                </tr>
-                <tr>
-                    <td colspan="2">/user/delete</td>
-                    <td colspan="2">DELETE</td>
-                  
-                </tr>
-                <th colspan="4">
-                    Products Endpoints
-                </th>
-                <tr>
-                    <td colspan="2">/products</td>
-                    <td colspan="2">GET</td>
-                   
-                </tr>
-                <tr>
-                    <td colspan="2">/products/:id</td>
-                    <td colspan="2">GET</td>
-               
-                </tr>
-                
-                <tr>
-                    <td colspan="2">/products/addProduct</td>
-                    <td colspan="2">POST</td>
-           
-                </tr>
-               
-                
-                </tr>
-                <tr>
-                    <td colspan="2">/products/update</td>
-                    <td colspan="2">PATCH</td>
-              
-                </tr>
-                <tr>
-                    <td colspan="2">/products/:id</td>
-                    <td colspan="2">DELETE</td>
-             
-                </tr>
-            </tbody>
-        </table>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js
-        "></script>
+            <tr>
+                <th scope="row">/users/update/:id/</th>
+                <td>Patch</td>
+                <td>To update a user info.</td>
+            </tr>
+            <tr>
+                <th scope="row">/users/delete/:id/</th>
+                <td>Delete</td>
+                <td>To delete a user.</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-bordered border-dark mt-2 w-50 mx-auto">
+        <h5 class="mt-5"> Product Routing</h5>
+        <thead>
+            <tr>
+                <th scope="col">Routes</th>
+                <th scope="col">HTTP Methods</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">/products/</th>
+                <td>GET</td>
+                <td>To display all Products.</td>
+            </tr>
+            <tr>
+                <th scope="row">/products/:id/</th>
+                <td>GET</td>
+                <td>To display a Product.</td>
+            </tr>
+            <tr>
+                <th scope="row">/products/addProduct/</th>
+                <td>POST</td>
+                <td>To add a new Product.</td>
+            </tr>
+            <tr>
+                <th scope="row">/products/update/:id/</th>
+                <td>Patch</td>
+                <td>To update a product info.</td>
+            </tr>
+            <tr>
+                <th scope="row">/products/delete/:id/</th>
+                <td>Delete</td>
+                <td>To delete a product.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Bootstrap - Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 </html>
