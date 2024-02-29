@@ -18,7 +18,9 @@ app.use(
         extended:true,
     }),
     cookieParser(),
-    cors()
+    cors({
+        origin:"*"
+    })
 )
 //Middleware
 app.use((req,res,next)=>{
