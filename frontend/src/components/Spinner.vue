@@ -7,17 +7,16 @@
 </template>
 
 <script>
-    export default {
-        name : 'SpinnerComp',
+export default {
+    name: 'SpinnerComp',
 }
-    
+
 </script>
 
 <style scoped>
-.spinner{
+.spinner {
     position: absolute;
-    left: 50% ;
+    left: 50%;
     bottom: 45%;
 }
-
 </style>

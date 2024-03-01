@@ -1,13 +1,12 @@
 <template>
-    <div class="w-25 mx-auto mt-5">
+    <div class=" mx-auto mt-5 ">
         <div class="card">
-        <slot name="cardHeader"> </slot>
+            <slot name="cardHeader"> </slot>
+        </div>
+        <div class="card-body">
+            <slot name="cardBody"></slot>
+        </div>
     </div>
-    <div class="card-body">
-        <slot name="cardBody"></slot>
-    </div>
-    </div>
-  
 </template>
 
 <script>
@@ -16,4 +15,4 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style src="../assets/css/style.css"></style>

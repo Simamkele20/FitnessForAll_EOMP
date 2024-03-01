@@ -5,18 +5,19 @@
     </div>
     <div class=" prodBtn row text-end">
       <div class="col">
-        <input type="text" placeholder="Search Product by name" class="form-control">
+        <input v-model="searchInput" type="text" placeholder="Search Product by name" @input="Search"
+          class="form-control">
       </div>
       <div class="col">
-        <button class=" btn btn-dark"> Sorting by Price</button>
+        <button @click="sortItems" class=" btn btn-dark"> Sort by Price</button>
       </div>
     </div>
 
-    <div class="col">
-      <div class="row d-grid d-md-flex" v-if="products">
-        <Card v-for="product in products" :key="product.prodID" class="ProdCar text-center">
+    <div class="ProdCar col mb-5">
+      <div class=" row d-grid d-md-flex" v-if="products">
+        <Card v-for="product in displayedProducts" :key="product.prodID" class=" text-center" id="cardPro">
           <template #cardHeader>
-            <img :src="product.prodUrl" class="card-img-top   mx-auto mt-4  w-75 " alt="Pro">
+            <img :src="product.prodUrl" class="card-img-top mx-auto mt-4  w-75" alt="Pro">
           </template>
           <template #cardBody>
             <h4 class="card-text text-dark mt-3 ">
@@ -25,7 +26,8 @@
             <h5 class="card-text text-dark ">
               R{{ product.prodAmount }}
             </h5>
-            <router-link :to="{ name: 'product', params: { id: product.prodID } }"><button class="btn bg-black text-white">
+            <router-link :to="{ name: 'product', params: { id: product.prodID } }"><button
+                class="btn bg-black text-white">
                 View More </button> </router-link>
           </template>
         </Card>
@@ -49,16 +51,54 @@ import Card from '../components/Card.vue';
 export default {
 
   name: "ProductsView",
+  data() {
+    return {
+      searchInput: '',
+      sortedItems: false,
+      Products: [
+        {
+          prodID: null,
+          prodName: null,
+          prodQuantity: null,
+          prodAmount: null,
+          prodDescription: null,
+          prodUrl: null,
+          userID: null
+        }
+      ]
+    }
+
+  },
   components: {
     Card, Spinner
   },
   computed: {
     products() {
       return this.$store.state.products
-    }
+    },
+    displayedProducts() {
+      let items = [...this.products];
+      if (this.sortedItems) {
+        items.sort((a, b) => a.prodAmount - b.prodAmount);
+      } else if (this.searchInput) {
+        items = items.filter(product =>
+          product.prodName.toLowerCase().includes(this.searchInput.toLowerCase())
+        );
+      }
+      return items;
+    },
+
   },
   mounted() {
     this.$store.dispatch('fetchProducts')
+  },
+  methods: {
+    Search() {
+      'Search input:', this.searchInput
+    },
+    sortItems() {
+      this.sortedItems = !this.sortedItems;
+    },
   }
 
 }
