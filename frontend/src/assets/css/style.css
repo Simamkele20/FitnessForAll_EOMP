@@ -1,565 +1,616 @@
 /* Universal Selector */
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* imports */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-
-::-webkit-scrollbar{
-    display: none;
-  }
-
-  .footer1{
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: x-large;
+::-webkit-scrollbar {
+  display: none;
 }
 
-.navbar{
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: x-large; 
+.footer1 {
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
 }
 
-  /* Home Content */
-.welcome{
-    background: linear-gradient(rgba(0, 0, 0, 0),
-                       rgba(0, 0, 0, 0.5)), url(https://i.ibb.co/g4gbPYW/istockphoto-1288737452-612x612-transformed-1.jpg) no-repeat top center fixed;
-    -webkit-background-size: cover;
-    background-size: cover;
-
-}
-.heading1{
-    padding-top: 567px;
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: x-large;
-    padding-left: 110px;
+.navbar {
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
 }
 
-.HomeBtn{
-    padding-top: 600px;
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: xx-large;
+/* Home Content */
+.welcome {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url(https://i.ibb.co/g4gbPYW/istockphoto-1288737452-612x612-transformed-1.jpg)
+      no-repeat top center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.heading1 {
+  padding-top: 567px;
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
+  padding-left: 110px;
 }
 
-.heading2{
-        font-family: "Nosifer", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+.HomeBtn {
+  padding-top: 600px;
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
 }
 
-.heading3{
-    font-family: "Luckiest Guy", cursive;
-    font-weight: 400;
-    font-style: normal;
+.heading2 {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.Scroller{
-    margin-left:300px;
+
+.heading3 {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.Scroller {
+  margin-left: 95px;
 }
 /* Sliding show */
 .slider {
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: x-large;
-    width: 80%;
-    scroll-snap-type: x mandatory; 
-    margin-inline: auto;   
-    animation: sliding 10s linear infinite;
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
+  width: 80%;
+  scroll-snap-type: x mandatory;
+  margin-inline: auto;
+  animation: sliding 10s linear infinite;
 }
 
-.slider >* {
-    width: 10rem;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: center;
+.slider > * {
+  width: 10rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Animation */
 @keyframes sliding {
-    from{
-        transform: translateX(40%);
-    }
-    to {
-        transform: translateX(-40%);
-    }
+  50% {
+    transform: translateX(50%);
+    color: red;
+  }
+  50% {
+    transform: translateX(20%);
+  }
+
 }
 
 /* About Content */
 
-.About1{
-    background: linear-gradient(rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.5)), url(https://i.ibb.co/LxB9ktR/istockphoto-909416522-612x612.jpg) no-repeat top center fixed;
--webkit-background-size: cover;
-background-size: cover;
-margin-bottom: -10px;
-
+.About1 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url(https://i.ibb.co/LxB9ktR/istockphoto-909416522-612x612.jpg) no-repeat
+      top center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: -10px;
 }
 
-.paragraphs{
-    font-family: "Kenia", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: xx-large;
-    padding-top: 130px;
+.paragraphs {
+  font-family: "Kenia", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  padding-top: 130px;
 }
 
-.PicA{
-    width: 766px;
+.PicA {
+  width: 766px;
 }
-
 
 /* Products COntent */
 .prodBtn {
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: x-large;
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
 }
-.ProdHead{
-    font-family: "Kenia", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: xx-large;
+.ProdHead {
+  font-family: "Kenia", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
 }
 
-.ProdCar{
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: x-large;
+.ProdCar {
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
+}
+#cardPro{
+  width: 25%;
 }
 
 /* Product COntent */
-.ProdCont{
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: x-large;
-
+.ProdCont {
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
 }
 
-.card-img-top{
-    aspect-ratio: 1/1;
+.card-img-top {
+  aspect-ratio: 1/1;
 }
 
 /* Admin Content */
-.AdiCont{
-    font-family: "Passero One", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: xx-large;
+.AdiCont {
+  font-family: "Passero One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
 }
-
 
 /*  Contact Content */
-.ContHead{
-    font-family: "Nosifer", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: xx-large;
-    padding-top: 550px;
-    padding-left: 10px;
-    padding-bottom: 60px;
+.ContHead {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  padding-top: 550px;
+  padding-left: 10px;
+  padding-bottom: 60px;
 }
 
-.Cont1{
-    background: linear-gradient(rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.5)), url(https://i.ibb.co/pjdXK0q/istockphoto-1032694350-612x612.jpg) no-repeat top center fixed;
--webkit-background-size: cover;
-background-size: cover;
-padding-top: 50px;
-margin-bottom: -10px;
+.Cont1 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url(https://i.ibb.co/pjdXK0q/istockphoto-1032694350-612x612.jpg) no-repeat
+      top center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding-top: 50px;
+  margin-bottom: -10px;
 }
 
 #contact {
-    width: 100%;
-    height: 100%;
-    margin-top: 11px;
-    padding-top: 50px;
-  }
-  
-  .section-header {
-    text-align: center;
-    margin-top: 17px;
-    padding: 40px 0;
-    font: 300 60px "Oswald", sans-serif;
-    color: #000000;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-  }
-  
-  .contact-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    max-width: 840px;
-  }
-  
-  /* Left contact page */
-  .form-horizontal {
-    /*float: left;*/
-    max-width: 400px;
-    font-family: "Lato";
-    font-weight: 400;
-  }
-  
-  .form-control,
-  textarea {
-    max-width: 400px;
-    background-color: #fff9f9ec;
-    color: #000000;
-    letter-spacing: 1px;
-  }
-  
-  .send-button {
-    margin-top: 15px;
-    height: 34px;
-    width: 400px;
-    overflow: hidden;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .alt-send-button {
-    width: 400px;
-    height: 34px;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .send-text {
-    display: block;
-    margin-top: 10px;
-    font: 700 12px "Lato", sans-serif;
-    letter-spacing: 2px;
-  }
-  
-  .alt-send-button:hover {
-    transform: translate3d(0px, -29px, 0px);
-  }
-  
-  /* Begin Right Contact Page */
-  .direct-contact-container {
-    max-width: 400px;
-  }
-  
-  /* Location, Phone, Email Section */
-  .contact-list {
-    list-style-type: none;
-    margin-left: -30px;
-    padding-right: 20px;
-  }
-  
-  .list-item {
-    line-height: 4;
-    color: #000000;
-  }
-  
-  .contact-text {
-    font: 300 18px "Lato", sans-serif;
-    letter-spacing: 1.9px;
-    color: #000000;
-  }
-  
-  .place {
-    margin-left: 62px;
-  }
-  
-  .phone {
-    margin-left: 56px;
-  }
-  
-  .gmail {
-    margin-left: 53px;
-  }
-  
-  .contact-text a {
-    color: #000000;
-    text-decoration: none;
-    transition-duration: 0.2s;
-  }
-  
-  .contact-text a:hover {
-    color: #7d7878;
-    text-decoration: none;
-  }
-  
-  /* Social Media Icons */
-  .social-media-list {
-    position: relative;
-    font-size: 22px;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
-  .contact-icon {
-    color: #000000;
-  }
-  
-  .contact-icon {
-    position: relative;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 10px 3px;
-    line-height: 60px;
-    border-radius: 50%;
-    color: #ffffff;
-    background-color: rgb(27, 27, 27);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .contact-icon:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px #fff;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .contact-icon:hover {
-    background-color: #505050;
-  }
-  
-  .contact-icon:hover:after {
-    opacity: 1;
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
-  }
-  
-  .contact-icon:hover {
-    color: #ffffff;
-  }
-  
-  hr {
-    border-color: rgba(255, 255, 255, 0.6);
-  }
-  
-  /* Media Query */
-  /* Contact Page */
-  @media screen and (max-width: 1024px) {
-    .contact-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-    .direct-contact-container,
-    .form-horizontal {
-      margin: 0 auto;
-    }
-  
-    .direct-contact-container {
-      margin-top: 60px;
-      max-width: 300px;
-    }
-    .social-media-list a {
-      height: 60px;
-      width: 60px;
-      line-height: 60px;
-    }
-    .social-media-list a:after {
-      width: 60px;
-      height: 60px;
-      line-height: 60px;
-    }
-    #ProjectCard{
-      width: 75%;
-      margin-left: 35px;
-  }
-  #SkillCard{
-      width: 78%;
-  }
-  .home1{
-      margin-left: 2px;
-  }
-  
-  }
-  
-  @media screen and (max-width: 555px) {
-    #contact-form {
-      width: 200px;
-    }
-    #submit {
-      width: 200px;
-    }
-    .alt-send-button {
-      margin-left: -100px;
-    }
-    .direct-contact-container {
-      margin-left: 60px;
-    }
-    .contact-text {
-      margin-left: -1px;
-    }
-    #home1{
-      margin-left: 120px;
-      margin-top: 20px;
-      width: 230px;
-  }
-  #home2{
-      margin-top: 20px;
-      margin-left:90px;
-      width:18rem;
-  }
-    
-  }
-  
-  @media screen and (max-width: 412px) {
-    .direct-contact-container {
-      margin-left: -10px;
-    }
-    .contact-text {
-      margin-left: -1px;
-    }
-    #SkillCard{
-      width: 89%;
-  } 
-  #home1{
-      margin-left: 17px;
-      margin-top: 20px;
-      width: 230px;
-  }
-  #home2{
-      margin-top: 20px;
-      margin-left:27px;
-      width:13rem;
-  }
-
-  .Scroller{
-    margin-left:20px;
+  width: 100%;
+  height: 100%;
+  margin-top: 11px;
+  padding-top: 50px;
 }
 
-.slider {
+.section-header {
+  text-align: center;
+  margin-top: 17px;
+  padding: 40px 0;
+  font: 300 60px "Oswald", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+.form-control,
+textarea {
+  max-width: 400px;
+  background-color: #fff9f9ec;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all 0.2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px "Lato", sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #000000;
+}
+
+.contact-text {
+  font: 300 18px "Lato", sans-serif;
+  letter-spacing: 1.9px;
+  color: #000000;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #000000;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #7d7878;
+  text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.contact-icon {
+  color: #000000;
+}
+
+.contact-icon {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-icon:hover {
+  background-color: #505050;
+}
+
+.contact-icon:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.contact-icon:hover {
+  color: #ffffff;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Media Query */
+/* Contact Page */
+@media screen and (max-width: 1024px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container,
+  .form-horizontal {
+    margin: 0 auto;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }
+  .social-media-list a {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list a:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+ 
+ 
+  .home1 {
+    margin-left: 2px;
+  }
+  .Scroller {
+    margin-left: 20px;
+  }
+
+  .slider {
     font-family: "Passero One", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: x-large;
-    width: 80%;
-    scroll-snap-type: x mandatory; 
-    margin-inline: auto;   
-    animation:none !important;
+    width: 75%;
+    scroll-snap-type: x mandatory;
+    margin-inline: auto;
+    animation: none !important;
+    margin-left: -45px;
+  }
 }
 
+@media screen and (max-width: 555px) {
+  #contact-form {
+    width: 200px;
+  }
+  #submit {
+    width: 200px;
+  }
+  .alt-send-button {
+    margin-left: -100px;
+  }
+  .direct-contact-container {
+    margin-left: 60px;
+  }
+  .contact-text {
+    margin-left: -1px;
+  }
+  #home1 {
+    margin-left: 120px;
+    margin-top: 20px;
+    width: 230px;
+  }
+  #home2 {
+    margin-top: 20px;
+    margin-left: 90px;
+    width: 18rem;
+  }
+}
 
-.heading1{
-    padding-top: 350px;
-    width:350px;
-    margin-left:-70px;
+@media screen and (max-width: 412px) {
+  .direct-contact-container {
+    margin-left: -10px;
   }
-  .heading2{
-    width:400px;
+  .contact-text {
+    margin-left: -1px;
   }
-.HomeBtn{
+  
+#cardPro{
+  width: auto;
+}
+  #home1 {
+    margin-left: 17px;
+    margin-top: 20px;
+    width: 230px;
+  }
+  #home2 {
+    margin-top: 20px;
+    margin-left: 27px;
+    width: 13rem;
+  }
+
+  .Scroller {
+    margin-left: 20px;
+  }
+
+  .slider {
+    font-family: "Passero One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+    width: 75%;
+    scroll-snap-type: x mandatory;
+    margin-inline: auto;
+    animation: none !important;
+    margin-left: -45px;
+  }
+
+  .heading1 {
+    padding-top: 460px;
+    width: 350px;
+    margin-left: -100px;
+  }
+  .heading2 {
+    width: 220px;
+    margin-left: 17px;
+    font-size: large;
+  }
+  .HomeBtn {
     padding-top: 10px;
     padding-bottom: 20px;
     margin: auto;
+  }
+  .ContHead {
+    font-size:small;
+    padding-top: 440px;
+    padding-bottom: 20px;
+    width:250px;
+    padding-left:-20px;
+  }
 }
+
+/* Admin COntent */
+@media screen and (max-width: 460px) {
+  #cardPro{
+    width: auto;
+  }
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
   }
 
-  /* Admin COntent */
-  @media screen and (max-width: 460px) {
+  table caption {
+    font-size: 1.5em;
+    margin: 0.5em 0 0.75em;
+  }
+
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 0.35em;
+  }
+
+  table th,
+  table td {
+    padding: 0.625em;
+    text-align: center;
+  }
+
+  table th {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .Scroller {
+    margin-left: 20px;
+  }
+
+  .slider {
+    font-family: "Passero One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+    width: 75%;
+    scroll-snap-type: x mandatory;
+    margin-inline: auto;
+    animation: none !important;
+    margin-left: -45px;
+  }
+
+  @media screen and (max-width: 600px) {
     table {
-      border: 1px solid #ccc;
-      border-collapse: collapse;
-      margin: 0;
+      border: 0;
+    }
+
+    table {
+      font-size: 1.3em;
+    }
+
+    th {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
       padding: 0;
-      width: 100%;
-      table-layout: fixed;
+      position: absolute;
+      width: 1px;
     }
-  
-    table caption {
-      font-size: 1.5em;
-      margin: 0.5em 0 0.75em;
+
+    tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: 0.625em;
     }
-  
-    table tr {
-      background-color: #f8f8f8;
-      border: 1px solid #ddd;
-      padding: 0.35em;
+
+    td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 0.8em;
+      text-align: right;
     }
-  
-    table th,
-    table td {
-      padding: 0.625em;
-      text-align: center;
-    }
-  
-    table th {
-      font-size: 20px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-  
-    @media screen and (max-width: 600px) {
-      table {
-        border: 0;
-      }
-  
-      table {
-        font-size: 1.3em;
-      }
-  
-      th {
-        border: none;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-      }
-  
-      tr {
-        border-bottom: 3px solid #ddd;
-        display: block;
-        margin-bottom: 0.625em;
-      }
-  
-      td {
-        border-bottom: 1px solid #ddd;
-        display: block;
-        font-size: 0.8em;
-        text-align: right;
-      }
-  
-      table td::before {
-        /*
+
+    table td::before {
+      /*
         * aria-label has no advantage, it won't be read inside a table
         content: attr(aria-label);
         */
-  
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-  
-      table td:last-child {
-        border-bottom: 0;
-      }
+
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
     }
   }
+  .Scroller {
+    margin-left: 20px;
+  }
 
- 
+  .slider {
+    font-family: "Passero One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+    width: 75%;
+    scroll-snap-type: x mandatory;
+    margin-inline: auto;
+    animation: none !important;
+    margin-left: -45px;
+  }
+}
